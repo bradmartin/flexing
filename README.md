@@ -1,8 +1,8 @@
 <p align="center">
-    <h3 align="center">Flexing :muscle: for Android</h3> 
-    <h4 align="center">
+    <h1 align="center">Flexing :muscle: for Android</h1> 
+    <h3 align="center">
         <a href="https://bradmartin.net" target="_blank">by Brad Martin</a>
-    </h4>
+    </h3>
 </p>
 
 <p align="center">
