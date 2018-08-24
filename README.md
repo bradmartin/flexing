@@ -9,8 +9,9 @@
     <a href="https://github.com/bradmartin/flexing/blob/master/src/LICENSE.md">
         <img src="https://img.shields.io/github/license/bradmartin/flexing.svg" alt="license" />
     </a>
-    [![Release](https://jitpack.io/0.1.30/bradmartin/flexing.svg)]
-    (https://jitpack.io/#bradmartin/flexing)
+    <a href="https://jitpack.io/#bradmartin/flexing">
+        <img src="https://jitpack.io/v/bradmartin/flexing.svg" alt="JitPack" />
+    </a>
     <a href="https://paypal.me/bradwayne88">
         <img src="https://img.shields.io/badge/Donate-PayPal-green.svg" alt="donate">
     </a>
