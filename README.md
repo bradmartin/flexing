@@ -12,6 +12,9 @@
     <a href="https://jitpack.io/#bradmartin/flexing">
         <img src="https://jitpack.io/v/bradmartin/flexing.svg" alt="JitPack" />
     </a>
+      <a href="https://twitter.com/bradwaynemartin">
+        <img src="https://img.shields.io/twitter/follow/bradwaynemartin.svg?style=social&label=Follow%20me" alt="Twitter" />
+    </a>
     <a href="https://paypal.me/bradwayne88">
         <img src="https://img.shields.io/badge/Donate-PayPal-green.svg" alt="donate">
     </a>
