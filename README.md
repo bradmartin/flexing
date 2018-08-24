@@ -1,5 +1,3 @@
-# Flexing :muscle: for Android
-
 <p align="center">
     <h3 align="center">Flexing :muscle: for Android</h3> 
     <h4 align="center">
