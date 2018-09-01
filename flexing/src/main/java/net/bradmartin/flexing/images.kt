@@ -1,12 +1,16 @@
 package net.bradmartin.flexing
 
+import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
 import android.hardware.camera2.CameraMetadata
+import android.net.Uri
 import android.support.media.ExifInterface
 import android.util.Log
 import android.widget.ImageView
 import java.io.ByteArrayInputStream
+import java.io.File
+import java.io.FileOutputStream
 import java.io.IOException
 
 const val TAG = "Flexing.Images"
@@ -43,4 +47,31 @@ fun getOrientationFromBytes(data: ByteArray, cameraId: Int): Int {
 
     Log.i(TAG, "Orientation $orientation")
     return orientation
+}
+
+fun saveImageFile(context: Context, file: File, data: ByteArray, saveToGallery: Boolean?) {
+    try {
+        val fos = FileOutputStream(file)
+        fos.write(data)
+        fos.close()
+
+        // if we are saving to gallery
+        if (saveToGallery == true) {
+            val exifInterface = ExifInterface(file.path)
+            val orientation = exifInterface.getAttribute("Orientation")
+            Log.i(TAG, "orientation $orientation")
+            val contentUri = Uri.fromFile(file)
+            Log.i(TAG, "contentUri $contentUri")
+            val mediaScanIntent = android.content.Intent(
+                    "android.intent.action.MEDIA_SCANNER_SCAN_FILE",
+                    contentUri
+            )
+
+            Log.i(TAG, "Sending broadcast for Intent $mediaScanIntent")
+            context.sendBroadcast(mediaScanIntent)
+        }
+    } catch (error: IOException) {
+        Log.e(TAG, "Error saveImageToDisk $error")
+        throw IOException("Error writing File to disk: $error")
+    }
 }
