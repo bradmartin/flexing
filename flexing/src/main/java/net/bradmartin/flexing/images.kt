@@ -68,6 +68,7 @@ fun saveImageFile(context: Context, file: File, data: ByteArray, saveToGallery: 
             )
 
             Log.i(TAG, "Sending broadcast for Intent $mediaScanIntent")
+            // Broadcasts an intent with the new image, this tells the OS an image has been added so it will show in the gallery.
             context.sendBroadcast(mediaScanIntent)
         }
     } catch (error: IOException) {
